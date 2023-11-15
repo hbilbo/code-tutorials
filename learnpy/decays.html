@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Experiment 1 Radioactivity</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.3.0.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="defdcd30-e5a8-4712-a2bf-aefaf634a728" data-root-id="p1189" style="display: contents;"></div>
+  
+    <script type="application/json" id="p1230">
+      {"58584f53-dfe8-4d6c-add4-f5c25d90bb1e":{"version":"3.3.0","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1189","attributes":{"x_range":{"type":"object","name":"DataRange1d","id":"p1190"},"y_range":{"type":"object","name":"DataRange1d","id":"p1191"},"x_scale":{"type":"object","name":"LinearScale","id":"p1198"},"y_scale":{"type":"object","name":"LinearScale","id":"p1199"},"title":{"type":"object","name":"Title","id":"p1227","attributes":{"text":"Decays"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1222","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1216","attributes":{"selected":{"type":"object","name":"Selection","id":"p1217","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1218"},"data":{"type":"map","entries":[["x",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAAAAAAAAAAADwPwAAAAAAAABAAAAAAAAACEAAAAAAAAAQQAAAAAAAABRAAAAAAAAAGEAAAAAAAAAcQAAAAAAAACBAAAAAAAAAIkA="},"shape":[10],"dtype":"float64","order":"little"}],["y",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAJEBFOZZMVaf1P217Zyarccc/fgNbceZhmT/B3roeKXtrPz+pf9vWwD0/eTm8hU0bED/dK+vlFHDhPvW0xhci5LI+0R6uI65mhD4="},"shape":[10],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1223","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1224"}}},"glyph":{"type":"object","name":"Line","id":"p1219","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"#1F78B4"}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1220","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"#1F78B4","line_alpha":0.1}},"muted_glyph":{"type":"object","name":"Line","id":"p1221","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"#1F78B4","line_alpha":0.2}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1197","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1210"},{"type":"object","name":"WheelZoomTool","id":"p1211","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1212","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1213","attributes":{"syncable":false,"level":"overlay","visible":false,"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"ResetTool","id":"p1214"},{"type":"object","name":"ExamineTool","id":"p1215"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1205","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1206","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1207"},"axis_label":"Decays (#)","major_label_policy":{"type":"object","name":"AllLabels","id":"p1208"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1200","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1201","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1202"},"axis_label":"Time (s)","major_label_policy":{"type":"object","name":"AllLabels","id":"p1203"}}}],"center":[{"type":"object","name":"Grid","id":"p1204","attributes":{"axis":{"id":"p1200"}}},{"type":"object","name":"Grid","id":"p1209","attributes":{"dimension":1,"axis":{"id":"p1205"}}},{"type":"object","name":"Legend","id":"p1225","attributes":{"items":[{"type":"object","name":"LegendItem","id":"p1226","attributes":{"label":{"type":"value","value":"Decays per second"},"renderers":[{"id":"p1222"}]}}]}}]}}]}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('p1230').textContent;
+              const render_items = [{"docid":"58584f53-dfe8-4d6c-add4-f5c25d90bb1e","roots":{"p1189":"defdcd30-e5a8-4712-a2bf-aefaf634a728"},"root_ids":["p1189"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
